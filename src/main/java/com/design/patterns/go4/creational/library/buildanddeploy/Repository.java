@@ -1,4 +1,4 @@
-package com.design.patterns.go4.creational.sample;
+package com.design.patterns.go4.creational.library.buildanddeploy;
 
 /**
  * Created by idiculab on 10/22/16.

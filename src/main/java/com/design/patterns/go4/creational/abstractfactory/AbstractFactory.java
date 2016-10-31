@@ -1,4 +1,4 @@
-package com.design.patterns.go4.creational;
+package com.design.patterns.go4.creational.abstractfactory;
 
 /**
  * Created by idicula on 8/10/2015.

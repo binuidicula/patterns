@@ -1,62 +1,15 @@
-package com.design.patterns.go4.creational.sample;
+package com.design.patterns.go4.creational.builder.sample;
+
+import com.design.patterns.go4.creational.library.buildanddeploy.*;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by idiculab on 10/22/16.
+ * Created by idiculab on 10/29/16.
  */
-public abstract class BuildAndDeploymentBuilder {
-
-    protected  BuildController buildController;
-    protected  DeploymentController deploymentController;
-
-    public BuildController getBuildController() {
-        return buildController;
-    }
-
-    public DeploymentController getDeploymentController() {
-        return deploymentController;
-    }
-
-    BuildAndDeploymentBuilder(BuildController buildController,
-                              DeploymentController deploymentController){
-        this.buildController = buildController;
-        this.deploymentController = deploymentController;
-    }
-
-    public  abstract BuildController injectDependency(BuildDependency dependency);
-
-    public  abstract BuildController addReposiory(Repository repository);
-
-    public abstract DeploymentController addStage(DeploymentStage stage);
-
-}
-
-class GradleBuildAndChefDeployBuilder extends BuildAndDeploymentBuilder{
-
-    GradleBuildAndChefDeployBuilder(){
-        super(new GradleBuildController(),new ChefDeploymentController());
-    }
-
-    public  BuildController injectDependency(BuildDependency dependency){
-        buildController.addDependency(dependency);
-        return buildController;
-    }
-
-    public  BuildController addReposiory(Repository repository){
-        buildController.addRepository(repository);
-        return buildController;
-    }
-
-    @Override
-    public DeploymentController addStage(DeploymentStage stage) {
-        deploymentController.addDeploymentStage(stage);
-        return deploymentController;
-    }
-}
-
-class BuildAndDeploymentDirector{
+public class BuildAndDeploymentDirector{
 
     BuildAndDeploymentBuilder builder = null;
 

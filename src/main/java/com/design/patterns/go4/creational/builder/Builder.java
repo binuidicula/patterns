@@ -1,4 +1,4 @@
-package com.design.patterns.go4.creational;
+package com.design.patterns.go4.creational.builder;
 
 /**
  * Created by idiculab on 10/23/15.

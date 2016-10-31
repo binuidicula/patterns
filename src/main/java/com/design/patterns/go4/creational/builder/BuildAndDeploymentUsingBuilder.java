@@ -1,4 +1,10 @@
-package com.design.patterns.go4.creational.sample;
+package com.design.patterns.go4.creational.builder;
+
+import com.design.patterns.go4.creational.builder.sample.BuildAndDeploymentBuilder;
+import com.design.patterns.go4.creational.builder.sample.BuildAndDeploymentDirector;
+import com.design.patterns.go4.creational.builder.sample.GradleBuildAndChefDeployBuilder;
+import com.design.patterns.go4.creational.library.buildanddeploy.BuildController;
+import com.design.patterns.go4.creational.library.buildanddeploy.DeploymentController;
 
 /**
  * Created by idiculab on 10/22/16.
@@ -31,6 +37,7 @@ public class BuildAndDeploymentUsingBuilder {
 
     public void createGradleChefUsingBuilder(){
         BuildAndDeploymentBuilder builder = new GradleBuildAndChefDeployBuilder();
+        createBuildAndDeploymentControllers(builder);
 
     }
 
