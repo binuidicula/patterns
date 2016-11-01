@@ -9,7 +9,7 @@ import com.design.patterns.go4.creational.library.buildanddeploy.DeploymentContr
 /**
  * Created by idiculab on 10/22/16.
  */
-public class BuildAndDeploymentUsingBuilder {
+public class ClientUsingBuilder {
     BuildController buildController = null;
     DeploymentController deploymentController = null;
 
